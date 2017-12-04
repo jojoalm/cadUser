@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <link rel="stylesheet" type="text/css"  href="estilo.css"/>
+        <title>Cadastro de Usuários</title>
+    </h:head>
+    <h:body>
+        <h2>Cadastro de Usuários</h2>
+        <!-- Início formulário cadastro-->
+        <h:form>
+            <table>
+                <tr>
+                    <td><h:outputText value="Nome"></h:outputText></td>
+                    <td><h:inputText value="#{usuarioBeans.user.nome}" id="nome" required="true" requiredMessage="Campo Nome é obrigatório"></h:inputText><br/></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Login"></h:outputText></td>
+                    <td><h:inputText value="#{usuarioBeans.user.login}" id="login" required="true" requiredMessage="Campo Login é obrigatório">
+                            <f:validateLength maximum="20"></f:validateLength>
+                        </h:inputText><br/></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Senha"></h:outputText></td>
+                    <td><h:inputSecret value="#{usuarioBeans.user.senha}" id="senha" required="true" requiredMessage="Campo Senha é obrigatório">
+                            <f:validateLength maximum="10" minimum="6"></f:validateLength>
+                        </h:inputSecret><br/></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Data de nascimento"></h:outputText></td>
+                    <td><h:inputText value="#{usuarioBeans.user.datanascimento}" id="datanascimento" required="true" requiredMessage="Campo Data de nascimento é obrigatório">
+                            <f:convertDateTime pattern="dd/MM/yyyy" timeZone="#{usuarioBeans.tz}"></f:convertDateTime>
+                        </h:inputText>
+                        <br/></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Observações"></h:outputText></td>
+                    <td><h:inputTextarea value="#{usuarioBeans.user.observacoes}" id="observacoes"></h:inputTextarea><br/></td>
+                    <h:messages layout="list"/>
+                </tr>
+                <tr>
+                    <td><h:commandButton value="Gravar" action="#{usuarioBeans.inserirUsuario}"></h:commandButton></td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </h:form> <!--Fim formulário de cadastro-->
+        <br />
+        <br />
+        <br />
+        <!--Início tabela de lista-->
+        <h2>Lista de Usuários</h2>
+        <h:dataTable value="#{usuarioBeans.usuarios}" var="usuario" styleClass="orders" headerClass="ordersHeader" columnClasses="oddColumn, evenColumn">
+            <h:column>
+                <f:facet name="header">
+                    Id
+                </f:facet>
+                #{usuario.id}
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    Nome
+                </f:facet>
+                #{usuario.nome}
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    Login
+                </f:facet>
+                #{usuario.login}
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    Senha
+                </f:facet>
+                #{usuario.senha}
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    Data de nascimento
+                </f:facet>
+                #{usuario.datanascimento}
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    Observações
+                </f:facet>
+                #{usuario.observacoes}
+            </h:column>
+        </h:dataTable> <!--Fim tabela de lista-->
+    </h:body>
+</html>
+

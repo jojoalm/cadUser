@@ -1,0 +1,252 @@
+/* 
+    Document   : estiloTimes
+    Created on : 06/09/2011, 00:07:49
+    Author     : SONY
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+.orders{
+    margin-left: 150px; 
+    margin-bottom: 50px; 
+
+}
+.ordersHeader{
+    text-align: center; 
+    font-style: normal; 
+    color: #333;
+    background-color: yellow; 
+
+}
+.oddColumn{
+    text-align: center;
+    height: 25px; 
+    color: #333;
+    background-color: yellow; 
+
+}
+.eveColumn{
+    text-align: center; 
+    color: white; 
+    background-color: #333; 
+
+}
+.oddRow{
+    text-align: center;
+    height: 25px; 
+    color: #333;
+    background-color: white; 
+}
+.eveRow{
+    text-align: center; 
+    color: white; 
+    background-color: #333; 
+}
+* { 
+    margin: 0; 
+    padding: 0;  
+}
+
+#geral {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    background-image: none;
+    background-color: #FFF;
+    /*background-image: url("bandeira-xadrez2.gif"); 
+    background-repeat: repeat;*/
+    background-image: url("grid.gif"); 
+    background-repeat: repeat;
+
+}
+#content {
+    position: relative;
+    width: 980px;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    background-color: #333;
+
+
+}
+#cabecalho {
+    position: relative;
+    height: 130px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: bolder;
+    color: #FFF;
+    text-align: center;
+    background-color: #333;
+}
+#intCab {
+    position: relative;
+    top: 25px;
+    border-top-width: 6px;
+    border-bottom-width: 6px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #999;
+    border-bottom-color: #999;
+}
+#conteudo {
+    position: relative;
+    height: auto;
+    overflow: auto; 
+}
+#lateral {
+    position: relative;
+    width: 180px;
+    height: 100%;
+    background-color: #333;
+    border-top-width: 6px;
+    border-top-style: solid;
+    border-top-color: #999;
+    text-align: center; 
+}
+#contPrincipal {
+    position: relative;
+    width: 794px;
+    float: right;
+    background-color: #333;
+    border-top-width: 6px;
+    border-top-style: solid;
+    border-top-color: #999;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    border-left-width: 6px;
+    border-left-style: solid;
+    border-left-color: #999;
+    min-height: 430px; 
+}
+#rodape {
+    position: relative;
+    height: 70px;
+    background-color: #333;
+    border-top-width: 6px;
+    border-top-style: solid;
+    border-top-color: #999;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden; 
+}
+#texto {
+    margin-left: 70px; 
+}
+
+.link{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.link:hover {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.link:active {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: darksalmon;
+    text-align: center;
+    text-decoration: none;
+}
+.doislink{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: yellow;
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.doislink:hover {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: yellow;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.doislink:active {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: darksalmon;
+    text-align: center;
+    text-decoration: underline;
+}
+.umlink{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.umlink:hover {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: yellow;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.umlink:active {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: darksalmon;
+    text-align: center;
+    text-decoration: underline;
+}
+#subTitulo{
+    height: auto;
+    position: relative;
+    background-color: #333;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    margin-left: 50px; 
+}
+
+#logoIf{
+    background-image: url('ifsul.gif'); 
+    background-repeat: no-repeat; 
+    position: relative; 
+    margin-left: 250px;
+    margin-top: 100px; 
+    height: 300px; 
+}

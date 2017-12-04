@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <link rel="stylesheet" type="text/css"  href="estilo.css"/>
+        <title>Controle de Usuários</title>
+    </h:head>
+    <h:body>
+        
+            <div id="geral">
+                <div id="content">
+                    <div id="cabecalho">
+                        <div id="intCab">Controle de Usuários</div><!--fim intCab--><br />
+                        <div id="subTitulo">
+                            <h:form>Você está em:&nbsp;&nbsp;
+                                <h:outputLink value="index.xhtml" styleClass="doislink" >
+                                    <f:verbatim>Home</f:verbatim>
+                                </h:outputLink>
+                            </h:form>
+                        </div><!--fim subtitulo-->
+                    </div><!--fim cabecalho-->
+                    <div id="conteudo">
+                        <div id="contPrincipal">
+                            <div id="logoIf">
+                                
+                            </div>
+                            
+                        </div><!--fim contPrincipal-->
+                        <div id="lateral">
+                            <br />
+                            <br />
+                            <br />
+                            <f:view>
+                                <h:form>
+                                    <h:outputLink value="index.xhtml" styleClass="link" >
+                                        <f:verbatim>Home</f:verbatim>
+                                    </h:outputLink>
+                                    <br /><br />
+                                    <h:outputLink value="inserir.xhtml" styleClass="link" >
+                                        <f:verbatim>Inserir</f:verbatim>
+                                    </h:outputLink>
+                                    <br /><br />
+                                    <h:outputLink value="buscar.xhtml" styleClass="link">
+                                        <f:verbatim>Buscar</f:verbatim>
+                                    </h:outputLink>
+                                    <br /><br />
+                                    <h:outputLink value="listar.xhtml" styleClass="link">
+                                        <f:verbatim>Listar</f:verbatim>
+                                    </h:outputLink>
+                                    <br /><br />
+                                    <h:outputLink value="atualizar.xhtml" styleClass="link">
+                                        <f:verbatim>Atualizar</f:verbatim>
+                                    </h:outputLink>
+                                    <br /><br />
+                                    <h:outputLink value="remover.xhtml" styleClass="link">
+                                        <f:verbatim>Remover</f:verbatim>
+                                    </h:outputLink>
+
+                                </h:form>
+                            </f:view>
+                        </div><!--fim lateral-->
+                    </div><!--fim conteudo-->
+                    <div id="rodape">
+                        <p>IFSul - 2011/2</p>
+                        <p>TAP - Tópicos Avançados em Programação</p>
+                        <p>Josiane Almeida e Raquel Rubio</p>
+                        <p>&nbsp;</p>
+                    </div><!--fim rodape-->
+                </div><!--fim content-->
+            </div><!--fim geral-->
+        
+    </h:body>
+</html>
+

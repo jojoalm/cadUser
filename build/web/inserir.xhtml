@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <link rel="stylesheet" type="text/css"  href="estilo.css"/>
+        <title>Controle de Usuários</title>
+    </h:head>
+    <h:body>
+        <div id="geral">
+            <div id="content">
+                <div id="cabecalho">
+                    <div id="intCab">Controle de Usuários</div><!--fim intCab--><br />
+                    <div id="subTitulo">
+                        <h:form>Você está em:&nbsp;&nbsp;
+                            <h:outputLink value="index.xhtml" styleClass="umlink" >
+                                <f:verbatim>Home</f:verbatim>
+                            </h:outputLink>&nbsp;&nbsp;>>&nbsp;&nbsp;
+                            <h:outputLink value="inserir.xhtml" styleClass="doislink" >
+                                <f:verbatim>Inserir</f:verbatim>
+                            </h:outputLink>
+                        </h:form>
+                    </div><!--fim subtitulo-->
+                </div><!--fim cabecalho-->
+                <div id="conteudo">
+                    <div id="contPrincipal">
+                        <br />
+                        <br />
+                        <br />
+                        <h:form>
+                            <div id="texto">
+                                <table>
+                                    <tr>
+                                        <td align="right"><h:outputText value="Nome"></h:outputText></td>
+                                        <td><h:inputText value="#{usuarioBeans.user.nome}" id="nome" required="true" requiredMessage="Campo Nome é obrigatório"></h:inputText><br/></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right"><h:outputText value="Login"></h:outputText></td>
+                                        <td><h:inputText value="#{usuarioBeans.user.login}" id="login" required="true" requiredMessage="Campo Login é obrigatório">
+                                                <f:validateLength maximum="20"></f:validateLength>
+                                            </h:inputText><br/></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right"><h:outputText value="Senha"></h:outputText></td>
+                                        <td><h:inputSecret value="#{usuarioBeans.user.senha}" id="senha" required="true" requiredMessage="Campo Senha é obrigatório">
+                                                <f:validateLength maximum="10" minimum="6"></f:validateLength>
+                                            </h:inputSecret><br/></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right"><h:outputText value="Data de nascimento"></h:outputText></td>
+                                        <td>&nbsp;<h:inputText value="#{usuarioBeans.user.datanascimento}" id="datanascimento" required="true" requiredMessage="Campo Data de nascimento é obrigatório">
+                                                <f:convertDateTime pattern="dd/MM/yyyy" timeZone="#{usuarioBeans.tz}"></f:convertDateTime>
+                                            </h:inputText>
+                                            <br/></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right"><h:outputText value="Observações"></h:outputText></td>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h:inputTextarea value="#{usuarioBeans.user.observacoes}" id="observacoes"></h:inputTextarea><br/></td>
+                                        <h:messages layout="list"/>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td align="right"><h:commandButton value="Gravar" action="#{usuarioBeans.inserirUsuario}"></h:commandButton></td>
+
+                                    </tr>
+                                </table>
+                            </div><!--fim texto-->
+                        </h:form> <!--Fim formulário de cadastro-->     
+                    </div><!--fim contPrincipal-->
+                    <div id="lateral">
+                        <br />
+                        <br />
+                        <br />
+                        <f:view>
+                            <h:form>
+                                <h:outputLink value="index.xhtml" styleClass="link" >
+                                    <f:verbatim>Home</f:verbatim>
+                                </h:outputLink>
+                                <br /><br />
+                                <h:outputLink value="inserir.xhtml" styleClass="link" >
+                                    <f:verbatim>Inserir</f:verbatim>
+                                </h:outputLink>
+                                <br /><br />
+                                <h:outputLink value="buscar.xhtml" styleClass="link">
+                                    <f:verbatim>Buscar</f:verbatim>
+                                </h:outputLink>
+                                <br /><br />
+                                <h:outputLink value="listar.xhtml" styleClass="link">
+                                    <f:verbatim>Listar</f:verbatim>
+                                </h:outputLink>
+                                <br /><br />
+                                <h:outputLink value="atualizar.xhtml" styleClass="link">
+                                    <f:verbatim>Atualizar</f:verbatim>
+                                </h:outputLink>
+                                 <br /><br />
+                                <h:outputLink value="remover.xhtml" styleClass="link">
+                                    <f:verbatim>Remover</f:verbatim>
+                                </h:outputLink>
+
+                            </h:form>
+                        </f:view>
+                    </div><!--fim lateral-->
+                </div><!--fim conteudo-->
+                <div id="rodape">
+                    <p>IFSul - 2011/2</p>
+                    <p>TAP - Tópicos Avançados em Programação</p>
+                    <p>Josiane Almeida e Raquel Rubio</p>
+                    <p>&nbsp;</p>
+                </div><!--fim rodape-->
+            </div><!--fim content-->
+        </div><!--fim geral-->
+    </h:body>
+</html>
+
